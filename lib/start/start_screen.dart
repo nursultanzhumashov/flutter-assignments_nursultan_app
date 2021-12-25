@@ -74,7 +74,7 @@ class _StartScreenState extends State<StartScreen> {
                   HomeList(
                     leading: Icon(
                       Icons.filter_1,
-                      color: IconColor.iconcolorflitter,
+                      //  color: IconColor.iconcolorflitter,
                     ),
                     title: 'Increment-Decrement',
                     subtitle: '1-assignment',
@@ -83,7 +83,7 @@ class _StartScreenState extends State<StartScreen> {
                   HomeList(
                     leading: Icon(
                       Icons.filter_2,
-                      color: IconColor.iconcolorflitter,
+                      //   color: IconColor.iconcolorflitter,
                     ),
                     title: 'I"m Rich',
                     subtitle: '2-assignment',
@@ -92,7 +92,7 @@ class _StartScreenState extends State<StartScreen> {
                   HomeList(
                     leading: Icon(
                       Icons.filter_3,
-                      color: IconColor.iconcolorflitter,
+                      //  color: IconColor.iconcolorflitter,
                       size: 24.9,
                     ),
                     title: 'Dice',
@@ -102,7 +102,7 @@ class _StartScreenState extends State<StartScreen> {
                   HomeList(
                     leading: Icon(
                       Icons.filter_4,
-                      color: IconColor.iconcolorflitter,
+                      // color: IconColor.iconcolorflitter,
                     ),
                     title: 'Xylophone',
                     subtitle: '4-assignment',
@@ -111,7 +111,7 @@ class _StartScreenState extends State<StartScreen> {
                   HomeList(
                     leading: Icon(
                       Icons.filter_5,
-                      color: IconColor.iconcolorflitter,
+                      ////  color: IconColor.iconcolorflitter,
                     ),
                     title: 'Quizz',
                     subtitle: '5-assignment',
@@ -120,7 +120,7 @@ class _StartScreenState extends State<StartScreen> {
                   HomeList(
                     leading: Icon(
                       Icons.filter_6,
-                      color: IconColor.iconcolorflitter,
+                      // color: IconColor.iconcolorflitter,
                     ),
                     title: 'BMI Calculator',
                     subtitle: '6-assignment',
@@ -129,7 +129,7 @@ class _StartScreenState extends State<StartScreen> {
                   HomeList(
                     leading: Icon(
                       Icons.filter_7,
-                      color: IconColor.iconcolorflitter,
+                      //  color: IconColor.iconcolorflitter,
                     ),
                     title: 'Weather',
                     subtitle: '8-assignment',
@@ -138,7 +138,7 @@ class _StartScreenState extends State<StartScreen> {
                   HomeList(
                     leading: Icon(
                       Icons.filter_7,
-                      color: IconColor.iconcolorflitter,
+                      //  color: IconColor.iconcolorflitter,
                     ),
                     title: 'Flash Chat',
                     subtitle: '9-assignment',

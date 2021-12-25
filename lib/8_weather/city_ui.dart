@@ -34,13 +34,6 @@ class _CityUIState extends State<CityUI> {
   @override
   void initState() {
     super.initState();
-    //kodtor astinda jazilish kerke
-    // getCurrentLocation();
-    // showSnackbar();
-    // _showMyDialog();
-    // WidgetsBinding.instance.addPostFrameCallback((_) {
-    //   _showMyDialog();
-    // });
 
     print('initState');
   }
@@ -48,13 +41,7 @@ class _CityUIState extends State<CityUI> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    //kodtor astinda jazilish kerke
     getCurrentLocationV2();
-    // showSnackbar();
-    //contest aluu uchun kutkonu jardam beret
-    // WidgetsBinding.instance.addPostFrameCallback((_) {
-    //   _showMyDialog();
-    // });
 
     print('didChangeDependencies');
   }
@@ -66,11 +53,9 @@ class _CityUIState extends State<CityUI> {
     _position = await LocationProvider().getCurrentPosition();
     weatherModel = await WeatherProvider().getWeatherModel(position: _position);
 
-    await Future.delayed(Duration(seconds: 1), () {});
+    await Future.delayed(const Duration(seconds: 1), () {});
 
-    if (isLoading == false) {
-      ///
-    }
+    if (isLoading == false) {}
 
     setState(() {
       isLoading = false;
@@ -93,10 +78,7 @@ class _CityUIState extends State<CityUI> {
 
     _celcius = (_kelvin - 273.15).round();
 
-    // print('_position.lat: ${_position.latitude}');
-    // print('_position.long: ${_position.longitude}');
-
-    await Future.delayed(Duration(seconds: 1), () {});
+    await Future.delayed(const Duration(seconds: 1), () {});
 
     setState(() {
       isLoading = false;
@@ -117,7 +99,7 @@ class _CityUIState extends State<CityUI> {
   Future<void> _showMyDialog() async {
     return showDialog<void>(
       context: context,
-      barrierDismissible: true, // user must tap button!
+      barrierDismissible: true,
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Write your city'),
@@ -194,18 +176,28 @@ class _CityUIState extends State<CityUI> {
     print('build');
 
     return Scaffold(
+      // appBar: CustomAppBar(
+      //   'Dice',
+      //   automaticallyImplyLeading: true,
+      //   //bul customniy widget,
+      //   leading: IconButton(
+      //     icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+      //     onPressed: () => Navigator.of(context).pop(),
+      //   ),
+      // ),
       body: Scaffold(
         key: scaffoldKey,
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/imagesweather/location_background.jpg'),
+              image: const AssetImage(
+                  'assets/imagesweather/location_background.jpg'),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
                   Colors.white.withOpacity(0.8), BlendMode.dstATop),
             ),
           ),
-          constraints: BoxConstraints.expand(),
+          constraints: const BoxConstraints.expand(),
           child: isLoading
               ? circularProgress()
               : SafeArea(
@@ -217,10 +209,18 @@ class _CityUIState extends State<CityUI> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           FlatButton(
+                            onPressed: () => Navigator.of(context).pop(),
+                            child: const Icon(
+                              Icons.arrow_back_ios,
+                              size: 41,
+                              color: Colors.white,
+                            ),
+                          ),
+                          FlatButton(
                             onPressed: () async {
                               getCurrentLocationV2();
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.near_me,
                               size: 50.0,
                             ),
@@ -249,14 +249,15 @@ class _CityUIState extends State<CityUI> {
                                   // weatherModel.cityName = 'Osh'; //Minday ozgortuu uchun Model de final bolboo kerek
                                 }
 
-                                await Future.delayed(Duration(seconds: 1));
+                                await Future.delayed(
+                                    const Duration(seconds: 1));
 
                                 setState(() {
                                   isLoading = false;
                                 });
                               }
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.location_city,
                               size: 50.0,
                             ),
@@ -264,7 +265,7 @@ class _CityUIState extends State<CityUI> {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 15.0),
+                        padding: const EdgeInsets.only(left: 15.0),
                         child: Row(
                           children: <Widget>[
                             Text(
@@ -287,7 +288,7 @@ class _CityUIState extends State<CityUI> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(right: 15.0),
+                        padding: const EdgeInsets.only(right: 15.0),
                         child: Text(
                           weatherModel.message == null
                               ? 'Weather in ${weatherModel.cityName}'

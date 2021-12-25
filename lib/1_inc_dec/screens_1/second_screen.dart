@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nursultan_assigmants/1_inc_dec/widgets/custom_app_bar.dart';
+import 'package:nursultan_assigmants/custom_app_bar/custom_app_bar.dart';
 import 'package:nursultan_assigmants/1_inc_dec/widgets/custom_rect_button.dart';
 
 class SecondScreen extends StatefulWidget {
@@ -15,16 +15,16 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: <Widget>[
           Scaffold(
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.white,
             appBar: CustomAppBar(
               'Тапшырма 02',
               automaticallyImplyLeading: true,
-              //bul customniy widget,
               leading: IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: Colors.red),
+                icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
             ),

@@ -4,8 +4,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nursultan_assigmants/9_flash_chat/constants.dart';
+import 'package:nursultan_assigmants/9_flash_chat/sabaktan/chat_screen_test.dart';
 import 'package:nursultan_assigmants/9_flash_chat/screens/chat_screen.dart';
 import 'package:nursultan_assigmants/9_flash_chat/widgets/rounded_button.dart';
+import 'package:nursultan_assigmants/custom_app_bar/custom_app_bar.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key key}) : super(key: key);
@@ -33,8 +35,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: AppBar(),
-      backgroundColor: Colors.white,
+      appBar: CustomAppBar(
+        '',
+        automaticallyImplyLeading: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ),
+      backgroundColor: Colors.black,
       body: GestureDetector(
         onTap: () {
           FocusScope.of(context).unfocus();
@@ -50,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   tag: 'logo',
                   child: Container(
                     height: 200.0,
-                    child: Image.asset('assets/images/logo.png'),
+                    child: Image.asset('assets/imagesflashchat/logo.png'),
                   ),
                 ),
               ),

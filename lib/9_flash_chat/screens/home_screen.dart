@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nursultan_assigmants/9_flash_chat/screens/login_screen.dart';
 import 'package:nursultan_assigmants/9_flash_chat/screens/register_screen.dart';
 import 'package:nursultan_assigmants/9_flash_chat/widgets/custom_elevated_button.dart';
+import 'package:nursultan_assigmants/custom_app_bar/custom_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -44,10 +45,13 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: animation.value,
-      appBar: AppBar(
-        backgroundColor: animation.value,
-        title: Text('Chat'),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        'Chat',
+        automaticallyImplyLeading: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
       ),
       body: Center(
         child: Column(

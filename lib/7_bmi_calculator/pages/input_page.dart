@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nursultan_assigmants/7_bmi_calculator/brains/calculator_brain.dart';
@@ -14,6 +16,7 @@ enum Gender {
 }
 
 class InputPage extends StatefulWidget {
+  const InputPage({Key key}) : super(key: key);
   @override
   _InputPageState createState() => _InputPageState();
 }
@@ -27,9 +30,9 @@ class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF0A0E21),
       appBar: AppBar(
-        //backgroundColor: Color(0x29EB1555),
-        title: Text(
+        title: const Text(
           'Ден соолуктун индекси',
           textAlign: TextAlign.center,
         ),
@@ -50,7 +53,7 @@ class _InputPageState extends State<InputPage> {
                   colour: selectedGender == Gender.male
                       ? kActiveCardColour
                       : kInactiveCardColour,
-                  cardChild: IconContent(
+                  cardChild: const IconContent(
                     icon: FontAwesomeIcons.mars,
                     label: 'Еркек',
                   ),
@@ -66,7 +69,7 @@ class _InputPageState extends State<InputPage> {
                   colour: selectedGender == Gender.female
                       ? kActiveCardColour
                       : kInactiveCardColour,
-                  cardChild: IconContent(
+                  cardChild: const IconContent(
                     icon: FontAwesomeIcons.venus,
                     label: 'Айым',
                   ),
@@ -80,7 +83,7 @@ class _InputPageState extends State<InputPage> {
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(
+                  const Text(
                     'Бой',
                     style: kLabelTextStyle,
                   ),
@@ -93,7 +96,7 @@ class _InputPageState extends State<InputPage> {
                         height.toString(),
                         style: kNumberTextStyle,
                       ),
-                      Text(
+                      const Text(
                         'см',
                         style: kLabelTextStyle,
                       )
@@ -101,13 +104,13 @@ class _InputPageState extends State<InputPage> {
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
-                      inactiveTrackColor: Color(0xFF8D8E98),
+                      inactiveTrackColor: const Color(0xFF8D8E98),
                       activeTrackColor: Colors.white,
-                      thumbColor: Color(0xFFEB1555),
+                      thumbColor: const Color(0xFFEB1555),
                       thumbShape:
-                          RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                          const RoundSliderThumbShape(enabledThumbRadius: 15.0),
                       overlayShape:
-                          RoundSliderOverlayShape(overlayRadius: 30.0),
+                          const RoundSliderOverlayShape(overlayRadius: 30.0),
                     ),
                     child: Slider(
                       value: height.toDouble(),
@@ -133,7 +136,7 @@ class _InputPageState extends State<InputPage> {
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text(
+                        const Text(
                           'Салмак',
                           style: kLabelTextStyle,
                         ),
@@ -151,7 +154,7 @@ class _InputPageState extends State<InputPage> {
                                     weight--;
                                   });
                                 }),
-                            SizedBox(
+                            const SizedBox(
                               width: 10.0,
                             ),
                             RoundIconButton(
@@ -174,7 +177,7 @@ class _InputPageState extends State<InputPage> {
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text(
+                        const Text(
                           'Жаш',
                           style: kLabelTextStyle,
                         ),
@@ -195,7 +198,7 @@ class _InputPageState extends State<InputPage> {
                                 );
                               },
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10.0,
                             ),
                             RoundIconButton(

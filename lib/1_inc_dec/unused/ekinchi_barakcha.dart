@@ -11,18 +11,18 @@ class EkinchiBarakcha extends StatelessWidget {
         title: Text('Ekinchi Barak StatelessWidget'),
         centerTitle: true,
         actions: [
-          Icon(Icons.search),
-          SizedBox(width: 20.0),
+          const Icon(Icons.search),
+          const SizedBox(width: 20.0),
         ],
       ),
       body: Container(
         color: Colors.redAccent,
-        child: Center(
+        child: const Center(
           child: Card(
             elevation: 12.0,
             color: Colors.amberAccent,
             child: Padding(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                   top: 48.0, bottom: 48.0, left: 100, right: 100),
               child:
                   Text('Bul ekinchi barak', style: TextStyle(fontSize: 20.0)),
@@ -36,7 +36,7 @@ class EkinchiBarakcha extends StatelessWidget {
         color: Colors.orangeAccent,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
+          children: const [
             Icon(Icons.usb),
             Icon(Icons.access_alarm),
             Icon(Icons.portable_wifi_off),

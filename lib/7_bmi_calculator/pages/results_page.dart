@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nursultan_assigmants/7_bmi_calculator/constants/constants.dart';
 import 'package:nursultan_assigmants/7_bmi_calculator/widgets/custom_button.dart';
 import 'package:nursultan_assigmants/7_bmi_calculator/widgets/reusable_card.dart';
+import 'package:nursultan_assigmants/custom_app_bar/custom_app_bar.dart';
 
 class ResultsPage extends StatelessWidget {
   ResultsPage(
@@ -16,10 +17,16 @@ class ResultsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF0A0E21),
       appBar: AppBar(
-        title: Text(
-          'Ден соолук индекси (BMI),',
-          textAlign: TextAlign.center,
+        title:
+            const Text('Ден соолук индекси (BMI)', textAlign: TextAlign.center),
+        backgroundColor: const Color(0xff424242),
+        automaticallyImplyLeading: true,
+        shadowColor: Colors.black,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+          onPressed: () => Navigator.of(context).pop(),
         ),
       ),
       body: Column(
@@ -28,9 +35,9 @@ class ResultsPage extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
-              child: Text(
+              child: const Text(
                 'Жыйынтык',
                 textAlign: TextAlign.center,
                 style: kTitleTextStyle,

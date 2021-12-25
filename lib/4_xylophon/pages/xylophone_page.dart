@@ -8,17 +8,24 @@ class XylophonePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Xylophone'),
+        title: const Text('Xylophone', textAlign: TextAlign.center),
+        backgroundColor: const Color(0xff046264),
+        automaticallyImplyLeading: true,
+        shadowColor: Colors.black,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
       ),
       body: Column(
-        children: [
-          const MusicButtonWidget(color: Color(0xffF44336), playIndex: 1),
-          const MusicButtonWidget(color: Color(0xffF89703), playIndex: 2),
-          const MusicButtonWidget(color: Color(0xffFEEA3B), playIndex: 3),
-          const MusicButtonWidget(color: Color(0xff4CAF50), playIndex: 4),
-          const MusicButtonWidget(color: Color(0xff2D9688), playIndex: 5),
-          const MusicButtonWidget(color: Color(0xffF44336), playIndex: 6),
-          const MusicButtonWidget(color: Color(0xff9B27B1), playIndex: 7),
+        children: const [
+          MusicButtonWidget(color: Color(0xffF44336), playIndex: 1),
+          MusicButtonWidget(color: Color(0xffF89703), playIndex: 2),
+          MusicButtonWidget(color: Color(0xffFEEA3B), playIndex: 3),
+          MusicButtonWidget(color: Color(0xff4CAF50), playIndex: 4),
+          MusicButtonWidget(color: Color(0xff2D9688), playIndex: 5),
+          MusicButtonWidget(color: Color(0xffF44336), playIndex: 6),
+          MusicButtonWidget(color: Color(0xff9B27B1), playIndex: 7),
         ],
       ),
     );

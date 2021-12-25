@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "939746255172",
+    "project_id": "nursultan-5b7bc",
+    "storage_bucket": "nursultan-5b7bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939746255172:android:60cbe2fd749b464f8d7711",
+        "android_client_info": {
+          "package_name": "com.example.nursultan_assigmants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939746255172-kmu6q977bquvu4e0a4o5mq95l5uv3l0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoWWRIhCwDuU1CnW9_MvDN5p6ZDt1PQe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939746255172-kmu6q977bquvu4e0a4o5mq95l5uv3l0u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

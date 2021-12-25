@@ -17,19 +17,19 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
     this.automaticallyImplyLeading = false,
     this.leading,
     this.actions,
-  })  : preferredSize = Size.fromHeight(50.0),
+  })  : preferredSize = const Size.fromHeight(50.0),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      iconTheme: IconThemeData(
-        color: Colors.black, //change your color here
+      iconTheme: const IconThemeData(
+        color: Colors.black,
       ),
       leading: leading,
       title: Text(
         title,
-        style: TextStyle(color: Colors.black),
+        style: const TextStyle(color: Colors.black),
       ),
       actions: actions,
       automaticallyImplyLeading: automaticallyImplyLeading,

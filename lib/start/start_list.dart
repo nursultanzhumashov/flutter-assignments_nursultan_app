@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nursultan_assigmants/start/icon_color.dart';
 
 class HomeList extends StatelessWidget {
   const HomeList(
@@ -21,23 +22,24 @@ class HomeList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Card(
-        color: Color(0xff007E78),
-        // shadowColor: Colors.white,
+        shadowColor: Colors.blue,
+        color: Color(0xff0E1621),
         elevation: 4,
-        margin: EdgeInsets.symmetric(vertical: 10),
+        margin: const EdgeInsets.symmetric(vertical: 10),
         child: ListTile(
           onTap: () => Navigator.pushNamed(context, route),
           leading: leading,
           title: Text(
             title,
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: const TextStyle(color: Colors.white, fontSize: 16),
           ),
           subtitle: Text(
             subtitle,
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: const TextStyle(color: Colors.blue, fontSize: 16),
           ),
-          trailing: Icon(
+          trailing: const Icon(
             Icons.keyboard_arrow_right,
+            color: IconColor.iconcolorflitter,
           ),
         ),
       ),

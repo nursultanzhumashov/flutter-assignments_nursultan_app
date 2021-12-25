@@ -62,12 +62,12 @@ class _BirinchiBarakchaState extends State<BirinchiBarakcha> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Тапшырма 01'),
+        title: const Text('Тапшырма 01'),
         centerTitle: true,
       ),
       body: Scaffold(
         appBar: AppBar(
-          title: Text('Тапшырма 01'),
+          title: const Text('Тапшырма 01'),
           centerTitle: true,
         ),
         body: Center(
@@ -92,16 +92,16 @@ class _BirinchiBarakchaState extends State<BirinchiBarakcha> {
                   ),
                 ],
               ),
-              Text('Тапшырма 01'),
+              const Text('Тапшырма 01'),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     'San: $meninSifram',
-                    style: TextStyle(fontSize: 40.0),
+                    style: const TextStyle(fontSize: 40.0),
                   ),
-                  SizedBox(height: 30.0),
+                  const SizedBox(height: 30.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -110,18 +110,18 @@ class _BirinchiBarakchaState extends State<BirinchiBarakcha> {
                           koshuu();
                           print('san: $meninSifram');
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.add,
                           size: 60.0,
                         ),
                       ),
-                      SizedBox(width: 40.0),
+                      const SizedBox(width: 40.0),
                       GestureDetector(
                         onTap: () {
                           kemituu();
                           print('san: $meninSifram');
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.remove,
                           size: 60.0,
                         ),
@@ -136,13 +136,13 @@ class _BirinchiBarakchaState extends State<BirinchiBarakcha> {
         bottomNavigationBar: Container(
           height: 30,
           color: Colors.amberAccent,
-          child: Text('bul bottomNavigationBar'),
+          child: const Text('bul bottomNavigationBar'),
         ),
       ),
       bottomNavigationBar: Container(
         height: 30,
         color: Colors.amberAccent,
-        child: Text('bul bottomNavigationBar'),
+        child: const Text('bul bottomNavigationBar'),
       ),
     );
   }

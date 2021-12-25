@@ -66,11 +66,7 @@ class WeatherProvider {
     if (response.statusCode == 200 || response.statusCode == 201) {
       final body = response.body;
 
-      // print('json body: $body');
-
       final data = convert.jsonDecode(body) as Map<String, dynamic>;
-      // print('Map data: ${data['name']}');
-      // print('Map data temperature: ${data['main']['temp']}');
 
       return data;
     } else {

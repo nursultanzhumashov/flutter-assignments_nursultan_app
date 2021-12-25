@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nursultan_assigmants/1_inc_dec/screens_1/second_screen.dart';
-import 'package:nursultan_assigmants/1_inc_dec/widgets/custom_app_bar.dart';
+import 'package:nursultan_assigmants/custom_app_bar/custom_app_bar.dart';
 import 'package:nursultan_assigmants/1_inc_dec/widgets/custom_button.dart';
 import 'package:nursultan_assigmants/1_inc_dec/widgets/custom_rect_button.dart';
 
@@ -17,22 +17,18 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: <Widget>[
           Scaffold(
             backgroundColor: Colors.transparent,
             appBar: CustomAppBar(
               'Тапшырма 01',
-              actions: [
-                Row(
-                  children: [
-                    Icon(Icons.search),
-                    const SizedBox(width: 8.0),
-                    newMethod(),
-                  ],
-                ),
-                const SizedBox(width: 18.0),
-              ],
+              automaticallyImplyLeading: true,
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
             ),
             body: Center(
               child: Column(
@@ -77,7 +73,7 @@ class _FirstScreenState extends State<FirstScreen> {
 
 //Bul jakshi refactoring emes
   Text newMethod() {
-    return Text(
+    return const Text(
       'data',
       style: TextStyle(color: Colors.black),
     );

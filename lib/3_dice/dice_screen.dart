@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:nursultan_assigmants/custom_app_bar/custom_app_bar.dart';
 
 class DiceScreen extends StatefulWidget {
   const DiceScreen({Key key}) : super(key: key);
@@ -21,10 +22,14 @@ class _DiceScreenState extends State<DiceScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFF5353),
-      appBar: AppBar(
-        backgroundColor: Color(0xffFF5353),
-        title: Text('Dice'),
+      backgroundColor: const Color(0xffFF5353),
+      appBar: CustomAppBar(
+        'Dice',
+        automaticallyImplyLeading: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
       ),
       body: Center(
         child: Row(

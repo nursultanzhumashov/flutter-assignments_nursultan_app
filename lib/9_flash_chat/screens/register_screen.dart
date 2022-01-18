@@ -4,10 +4,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nursultan_assigmants/9_flash_chat/constants.dart';
-import 'package:nursultan_assigmants/9_flash_chat/sabaktan/chat_screen_test.dart';
 import 'package:nursultan_assigmants/9_flash_chat/screens/chat_screen.dart';
 import 'package:nursultan_assigmants/9_flash_chat/widgets/rounded_button.dart';
-import 'package:nursultan_assigmants/custom_app_bar/custom_app_bar.dart';
+import 'package:nursultan_assigmants/app/custom_app_bar/custom_app_bar.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key key}) : super(key: key);

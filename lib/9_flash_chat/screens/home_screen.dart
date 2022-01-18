@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nursultan_assigmants/9_flash_chat/screens/login_screen.dart';
 import 'package:nursultan_assigmants/9_flash_chat/screens/register_screen.dart';
 import 'package:nursultan_assigmants/9_flash_chat/widgets/custom_elevated_button.dart';
-import 'package:nursultan_assigmants/custom_app_bar/custom_app_bar.dart';
+import 'package:nursultan_assigmants/app/custom_app_bar/custom_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key key}) : super(key: key);

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nursultan_assigmants/9_flash_chat/screens/login_screen.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
